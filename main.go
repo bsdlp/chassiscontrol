@@ -26,7 +26,7 @@ func (srv *server) sessionOpts() *bmc.SessionOpts {
 	return &bmc.SessionOpts{
 		Username:          srv.cfg.Username,
 		Password:          []byte(srv.cfg.Password),
-		MaxPrivilegeLevel: ipmi.PrivilegeLevelUser,
+		MaxPrivilegeLevel: ipmi.PrivilegeLevelAdministrator,
 	}
 }
 
