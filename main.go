@@ -15,7 +15,7 @@ func main() {
 	// optional config file path
 	configFilePath, ok := os.LookupEnv("WOL_CONFIG_FILE")
 	if !ok {
-		configFilePath = "/config"
+		configFilePath = "/etc/chassiscontrol/config"
 	}
 
 	// read config file
