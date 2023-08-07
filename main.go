@@ -1,8 +1,10 @@
 package main
 
 import (
+	"encoding/json"
 	"log"
 	"net/http"
+	"os"
 
 	"github.com/bsdlp/chassiscontrol/configuration"
 	"github.com/bsdlp/chassiscontrol/internal/server"
@@ -32,7 +34,7 @@ func main() {
 		Targets: cfg.Targets,
 	}
 
-	err = http.ListenAndServe(cfg.ServerHostPort, chassis.NewChassisControlServer(srv))
+	err := http.ListenAndServe(cfg.ServerHostPort, chassis.NewChassisControlServer(srv))
 	if err != nil {
 		log.Fatal(err.Error())
 	}
