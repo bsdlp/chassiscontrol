@@ -22,7 +22,7 @@ message GetChassisStatusResponse {
 	bool last_power_down_fault = 8;
 	bool last_power_down_interlock = 9;
 	bool last_power_down_overload = 10;
-	bool last_power_supply_failure = 11;
+	bool last_power_down_supply_failure = 11;
 	bool reset_button_disabled = 12;
 	bool power_off_button_disabled = 13;
 }
