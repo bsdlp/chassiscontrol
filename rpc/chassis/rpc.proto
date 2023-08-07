@@ -1,0 +1,47 @@
+syntax = "proto3";
+package github.com.bsdlp.chassiscontrol;
+option go_package = "github.com/bsdlp/dell-wol/rpc/chassis";
+
+service ChassisControl {
+	rpc GetChassisStatus(GetChassisStatusRequest) returns (GetChassisStatusResponse);
+	rpc IssueChassisControlCommand(ChassisControlRequest) returns (ChassisControlResponse);
+}
+
+message GetChassisStatusRequest {
+	string target = 1;
+}
+
+message GetChassisStatusResponse {
+	string target = 1;
+	bool power_control_fault = 2;
+	bool power_fault = 3;
+	bool interlock = 4;
+	bool power_overload = 5;
+	bool powered_on = 6;
+	bool powered_on_by_ipmi = 7;
+	bool last_power_down_fault = 8;
+	bool last_power_down_interlock = 9;
+	bool last_power_down_overload = 10;
+	bool last_power_supply_failure = 11;
+	bool reset_button_disabled = 12;
+	bool power_off_button_disabled = 13;
+}
+
+enum ChassisControlCommand {
+	OFF = 0;
+	ON = 1;
+	CYCLE = 2;
+	RESET = 3;
+	DIAGNOSTIC_INTERRUPT = 4;
+	SOFT_POWER_OFF = 5;
+}
+
+message ChassisControlRequest {
+	string target = 1;
+	ChassisControlCommand chassis_control_command = 2;
+}
+
+message ChassisControlResponse {
+	string target = 1;
+	string error = 2;
+}
