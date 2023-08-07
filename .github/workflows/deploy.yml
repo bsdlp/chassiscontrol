@@ -20,7 +20,7 @@ jobs:
         id: dockermeta
         uses: docker/metadata-action@v4
         with:
-          images: ghcr.io/bsdlp/chassiscontrol
+          images: ghcr.io/${{ github.repository }}
           tags: |
             type=sha
             type=raw,value=latest
