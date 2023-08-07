@@ -5,8 +5,8 @@ import (
 	"errors"
 	"log"
 
-	"github.com/bsdlp/dell-wol/configuration"
-	"github.com/bsdlp/dell-wol/rpc/chassis"
+	"github.com/bsdlp/chassiscontrol/configuration"
+	"github.com/bsdlp/chassiscontrol/rpc/chassis"
 	"github.com/gebn/bmc"
 	"github.com/gebn/bmc/pkg/ipmi"
 	"github.com/twitchtv/twirp"

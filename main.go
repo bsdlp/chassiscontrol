@@ -4,9 +4,9 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/bsdlp/dell-wol/configuration"
-	"github.com/bsdlp/dell-wol/internal/server"
-	"github.com/bsdlp/dell-wol/rpc/chassis"
+	"github.com/bsdlp/chassiscontrol/configuration"
+	"github.com/bsdlp/chassiscontrol/internal/server"
+	"github.com/bsdlp/chassiscontrol/rpc/chassis"
 	"github.com/kelseyhightower/envconfig"
 )
 

@@ -1,4 +1,4 @@
-module github.com/bsdlp/dell-wol
+module github.com/bsdlp/chassiscontrol
 
 go 1.20
 

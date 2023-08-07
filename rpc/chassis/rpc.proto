@@ -1,6 +1,6 @@
 syntax = "proto3";
 package github.com.bsdlp.chassiscontrol;
-option go_package = "github.com/bsdlp/dell-wol/rpc/chassis";
+option go_package = "github.com/bsdlp/chassiscontrol/rpc/chassis";
 
 service ChassisControl {
 	rpc GetChassisStatus(GetChassisStatusRequest) returns (GetChassisStatusResponse);
