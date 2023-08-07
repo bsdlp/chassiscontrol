@@ -23,9 +23,6 @@ github.com/golang/protobuf/proto
 ## explicit; go 1.12
 github.com/google/gopacket
 github.com/google/gopacket/layers
-# github.com/kelseyhightower/envconfig v1.4.0
-## explicit
-github.com/kelseyhightower/envconfig
 # github.com/matttproud/golang_protobuf_extensions v1.0.4
 ## explicit; go 1.9
 github.com/matttproud/golang_protobuf_extensions/pbutil

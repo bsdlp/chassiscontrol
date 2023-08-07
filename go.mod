@@ -4,7 +4,6 @@ go 1.20
 
 require (
 	github.com/gebn/bmc v0.0.0-20230707151514-cee0a42bd8e5
-	github.com/kelseyhightower/envconfig v1.4.0
 	github.com/twitchtv/twirp v8.1.3+incompatible
 	google.golang.org/protobuf v1.31.0
 )
