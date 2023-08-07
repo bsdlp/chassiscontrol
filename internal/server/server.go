@@ -34,8 +34,9 @@ func (srv *Server) dialBMC(ctx context.Context, targetConfig configuration.IPMIH
 	}
 
 	session, err := transport.NewSession(context.Background(), &bmc.SessionOpts{
-		Username: targetConfig.Username,
-		Password: []byte(targetConfig.Password),
+		Username:          targetConfig.Username,
+		Password:          []byte(targetConfig.Password),
+		MaxPrivilegeLevel: ipmi.PrivilegeLevelAdministrator,
 	})
 	if err != nil {
 		log.Printf("error creating new session: %s", err.Error())
