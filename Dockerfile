@@ -7,4 +7,4 @@ FROM gcr.io/distroless/static
 COPY --from=builder /main /bin/main
 EXPOSE 80
 
-ENTRYPOINT [ "/main" ]
+ENTRYPOINT [ "/bin/main" ]
