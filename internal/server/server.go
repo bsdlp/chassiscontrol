@@ -42,6 +42,13 @@ func (srv *Server) dialBMC(ctx context.Context, targetConfig configuration.IPMIH
 		log.Printf("error creating new session: %s", err.Error())
 		return nil, errors.New("error creating new session")
 	}
+
+	_, err = session.SetSessionPrivilegeLevel(ctx, ipmi.PrivilegeLevelAdministrator)
+	if err != nil {
+		log.Printf("error setting privilege level: %s", err.Error())
+		return nil, errors.New("error setting privilege level")
+	}
+
 	return &bmcSession{
 		transport: transport,
 		Session:   session,
